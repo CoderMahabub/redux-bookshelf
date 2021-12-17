@@ -1,8 +1,9 @@
 import React from 'react';
 import Book from '../components/Book/Book';
-import books from '../fakeData/books.json'
+import { useSelector } from 'react-redux';
 import PageLayout from '../components/PageLayout/PageLayout';
 const Discover = () => {
+    const books = useSelector((state) => state.books.discover)
     return (
         <PageLayout>
             {
